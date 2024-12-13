@@ -45,6 +45,17 @@ The project is divided into two main packages:
 
 ---
 
+
+## Swagger Documentation
+
+The API documentation for this microservice is available at the following path:
+
+- Swagger UI: /openapi
+
+This provides an interactive interface for exploring and testing the API endpoints.
+
+---
+
 ## Getting Started
 
 ### Prerequisites
