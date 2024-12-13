@@ -1,0 +1,28 @@
+app:
+  version: 1.0.0
+
+server:
+  servlet:
+    contextPath: /api/product-order/v1
+
+spring:
+  application:
+    name: ms-product-order
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 1MB
+      max-request-size: 1MB
+
+  data:
+    mongodb:
+      uri: mongodb://mongo:mongo@localhost:27017/admin
+      database: product_order
+
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /openapi
+    enable-flash-message: true
