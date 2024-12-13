@@ -11,6 +11,7 @@ import com.luizalabs.productorder.model.utils.ProductOrderFileUtils;
 import com.luizalabs.productorder.model.utils.Utils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
@@ -62,6 +63,7 @@ public class ProductOrderService {
      * @param size      size of pagination
      * @return product orders found
      */
+    @Cacheable(value = "productOrders", key = "#orderId + '-' + #startDate + '-' + #endDate + '-' + #page + '-' + #size")
     public Page<UserDTO> find(Long orderId,
                               LocalDate startDate, LocalDate endDate,
                               int page, int size) {

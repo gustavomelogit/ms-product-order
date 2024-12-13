@@ -71,6 +71,7 @@
             <version>${org.instancio}</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>
